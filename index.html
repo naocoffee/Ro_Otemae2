@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>炉のお点前 手順確認＆お道具配置クイズ｜裏千家</title>
+  <meta name="description" content="裏千家茶道・炉のお点前の手順を、上から見たお道具配置図を見ながら4択クイズで確認できる学習アプリです。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title">炉のお点前 稽古帖</h1>
+      <p class="site-sub">裏千家・手順確認とお道具配置のクイズ</p>
+    </div>
+  </header>
+
+  <nav class="tabs-wrap" aria-label="お点前の選択">
+    <div class="tabs" id="tabs" role="tablist"></div>
+  </nav>
+
+  <main>
+    <section class="proc-head">
+      <div>
+        <h2 class="proc-title" id="procTitle"></h2>
+        <p class="proc-desc" id="procDesc"></p>
+      </div>
+      <div class="scoreboard" aria-live="polite">
+        <span>正解 <strong id="score">0</strong> / <span id="answered">0</span></span>
+        <span id="best"></span>
+      </div>
+    </section>
+
+    <div class="progress" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+
+    <div class="layout">
+      <section class="panel diagram-panel" aria-label="お道具配置図">
+        <div class="diagram-caption">
+          <span>配置図（上から見た簡易図）</span>
+          <b id="layoutName"></b>
+        </div>
+        <div class="diagram" id="diagram"></div>
+        <ul class="legend" id="legend"></ul>
+        <p class="diagram-note">図の下側が亭主の座る手前、上側が向こうです。点線の輪は、この場面で扱う道具（置く場合はその置き位置）です。</p>
+      </section>
+
+      <section class="panel quiz-panel" id="quizPanel" aria-live="polite"></section>
+    </div>
+
+    <details class="panel review" id="review">
+      <summary>このお点前の手順一覧を見る</summary>
+      <ol class="review-list" id="reviewList"></ol>
+    </details>
+  </main>
+
+  <footer class="site-footer">
+    <p>本アプリは稽古の復習用の簡易教材です。所作の細部（置く位置・手の運び・挨拶の言葉）は、教場や先生のご指導、年代による教本の改訂によって異なる場合があります。お稽古では必ず先生のご指導を優先してください。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
